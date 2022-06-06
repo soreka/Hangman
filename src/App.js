@@ -12,7 +12,7 @@ class App extends Component {
       score:100,
       letterStatus : this.generateLetterStatus(),
       solution : {
-          word:"HIT",
+          word:"HIT THE ROAD JACK",
           hint:"jack would like to walk on something ! "
               }
     }
@@ -22,12 +22,16 @@ class App extends Component {
     // let tempLetters = Object.assign({}, this.state.letterStatus);
     let tempLetters ={...this.state.letterStatus}
     tempLetters[letter] = true
-    this.setState({
-      letterStatus: tempLetters
-    })
+    
     if(!Array.from(this.state.solution.word).find(l=> l=== letter)){
-      this.setState({score:this.state.score - 20})
+      this.setState({score:this.state.score - 20,
+            letterStatus:tempLetters})
     }
+    else{
+      this.setState({score:this.state.score + 5,
+        letterStatus:tempLetters})
+    }
+    
   }
 
 
