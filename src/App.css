@@ -1,5 +1,10 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: start;
+  align-content: space-around;
+  flex-direction: column;
+  width: 40%;
+  row-gap: 20%;
 }
 
 .App-logo {
@@ -35,4 +40,29 @@
   to {
     transform: rotate(360deg);
   }
+}
+.letters-Container{
+  display: flex;
+  width: 60%;
+  justify-content: space-evenly;
+  gap:2%;
+  align-content: space-between;
+  flex-wrap: wrap;
+  font-weight:bolder ;
+
+}
+.solution-letters{
+  display: flex;
+  gap:5%;
+}
+.solution-word{
+  display: flex;
+  flex-direction: row;
+  gap:7%;
+  
+  
+}
+
+.lightLetter{
+  font-weight: 100;
 }
